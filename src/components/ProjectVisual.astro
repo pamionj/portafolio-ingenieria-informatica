@@ -1,0 +1,31 @@
+---
+interface Props { type: string; }
+const { type } = Astro.props;
+---
+<div class:list={['project-visual', `visual-${type}`]} aria-hidden="true">
+  {type === 'data' ? <>
+    <div class="visual-topline"><span class="tiny-dot"></span> unified / data insights <span class="visual-status">PIPELINE ETL</span></div>
+    <div class="data-workspace">
+      <div class="data-sources"><span>CSV <i>01</i></span><span>FORMS <i>02</i></span><span>SHEETS <i>03</i></span></div>
+      <div class="flow-connector"></div>
+      <div class="etl-node"><span>⌘</span><strong>ETL ENGINE</strong><small>extract · transform · load</small></div>
+      <div class="flow-connector"></div>
+      <div class="data-output"><strong>Una fuente.<br />Más claridad.</strong><svg viewBox="0 0 160 60" fill="none"><path d="M0 52 20 43 35 48 55 30 75 35 90 18 110 26 130 10 160 4" stroke="currentColor" stroke-width="2"/><path d="M0 52 20 43 35 48 55 30 75 35 90 18 110 26 130 10 160 4V60H0Z" fill="currentColor" opacity=".1" /></svg></div>
+    </div>
+    <div class="visual-footnote">ARQUITECTURA CONCEPTUAL <span>5 fases → 1 master</span></div>
+  </> : type === 'agent' ? <>
+    <div class="visual-topline"><span class="tiny-dot violet"></span> agent.core <span class="visual-status">ORCHESTRATION</span></div>
+    <div class="agent-flow"><span class="agent-input">POST /chat</span><span class="flow-line"></span><div class="agent-core">✳<small>AgentCore</small></div><div class="agent-routes"><span>LLM Router <i>↗</i></span><span>RAG Pipeline <i>↗</i></span><span>Tool Engine <i>↗</i></span></div></div>
+    <div class="visual-footnote">INTENT → CONTEXT → RESPONSE</div>
+  </> : type === 'web' ? <>
+    <div class="mini-browser"><div class="browser-chrome"><i></i><i></i><i></i><span>biomagnetismoyterapiasalternativas.cl</span></div><div class="wellness-preview"><span>BIOMAGNETISMO & TERAPIAS</span><strong>Bienestar que<br />conecta contigo.</strong><div class="wellness-leaf leaf-one"></div><div class="wellness-leaf leaf-two"></div><div class="wellness-leaf leaf-three"></div><small>DISEÑO WEB · SEO · PRODUCCIÓN</small></div></div><div class="visual-footnote">INTERPRETACIÓN VISUAL DEL PROYECTO</div>
+  </> : type === 'api' ? <>
+    <div class="visual-topline"><span class="tiny-dot"></span> users.controller.java</div><div class="api-code"><div><b>GET</b><span>/users/{'{id}'}</span><i>200 OK</i></div><pre><span>{'{'}</span><br />  <em>"id"</em>: <strong>1</strong>,<br />  <em>"name"</em>: <strong>"Pablo"</strong>,<br />  <em>"role"</em>: <strong>"developer"</strong><br /><span>{'}'}</span></pre></div><div class="visual-footnote">RESPUESTA ILUSTRATIVA · REST API</div>
+  </> : type === 'neural' ? <>
+    <div class="visual-topline"><span class="tiny-dot violet"></span> neural.network <span class="visual-status">MLP</span></div><div class="neural-visual"><div class="sample-shapes"><span></span><span></span><small>28 × 28 px</small></div><svg viewBox="0 0 240 120"><g stroke="currentColor" opacity=".25">{[25,60,95].map(y => [15,45,75,105].map(z => <path d={`M25 ${y} 115 ${z} 215 60`} />))}</g><g fill="currentColor">{[25,60,95].map(y => <circle cx="25" cy={y} r="6"/>)}{[15,45,75,105].map(y => <circle cx="115" cy={y} r="6"/>)}<circle cx="215" cy="60" r="9"/></g></svg></div><div class="visual-footnote">DATOS SINTÉTICOS · APRENDIZAJE SUPERVISADO</div>
+  </> : type === 'qa' ? <>
+    <div class="visual-topline"><span class="tiny-dot"></span> selenium / test suite</div><div class="qa-list"><div><span>✓</span> Login exitoso <small>TEST 01</small></div><div><span>✓</span> Credenciales inválidas <small>TEST 02</small></div><div><span>✓</span> Usuario bloqueado <small>TEST 03</small></div></div><div class="visual-footnote">ESCENARIOS DOCUMENTADOS · SAUCEDEMO</div>
+  </> : <>
+    <div class="visual-topline"><span class="tiny-dot amber"></span> la tienda del ganso <span class="visual-status">FULLSTACK</span></div><div class="store-visual"><div>⌨<span>Catálogo</span></div><div>⌁<span>Carrito</span></div><div>▣<span>Checkout</span></div></div><div class="visual-footnote">NEXT.JS → PRISMA → POSTGRESQL</div>
+  </>}
+</div>

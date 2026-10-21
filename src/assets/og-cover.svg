@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#194658"/><stop offset="1" stop-color="#080d16"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#244258" stroke-opacity=".25"/></pattern>
+    <linearGradient id="core" x2="1" y2="1"><stop stop-color="#214359"/><stop offset="1" stop-color="#101f30"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#080d16"/>
+  <circle cx="955" cy="310" r="330" fill="url(#glow)"/>
+  <rect x="680" width="520" height="630" fill="url(#grid)"/>
+  <path d="M60 60h1080M60 565h1080" stroke="#263749"/>
+  <circle cx="65" cy="105" r="4" fill="#66e7dd"/>
+  <text x="82" y="110" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="13" letter-spacing="3">BACKEND · FULLSTACK · DATOS</text>
+  <text x="60" y="202" fill="#a0b0c4" font-family="Segoe UI,Arial,sans-serif" font-size="25">Pablo Amion</text>
+  <text x="55" y="295" fill="#ecf0f5" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">Código con</text>
+  <text x="55" y="380" fill="#ecf0f5" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">propósito.</text>
+  <text x="55" y="465" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">Impacto real.</text>
+  <g fill="none" stroke="#66e7dd" stroke-opacity=".3">
+    <circle cx="940" cy="305" r="160" stroke-dasharray="4 7"/>
+    <ellipse cx="940" cy="305" rx="215" ry="85" transform="rotate(-40 940 305)"/>
+    <ellipse cx="940" cy="305" rx="215" ry="85" transform="rotate(40 940 305)"/>
+  </g>
+  <rect x="858" y="223" width="164" height="164" rx="35" fill="url(#core)" stroke="#497589"/>
+  <text x="881" y="330" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="44">&lt;<tspan fill="#ecf0f5" font-size="72">p</tspan>/&gt;</text>
+  <rect x="720" y="226" width="82" height="35" rx="7" fill="#102231" stroke="#355166"/>
+  <text x="738" y="249" fill="#95c0d3" font-family="Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="2">DATA</text>
+  <rect x="1070" y="150" width="78" height="35" rx="7" fill="#102231" stroke="#355166"/>
+  <text x="1085" y="173" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="2">CODE</text>
+  <rect x="1078" y="407" width="62" height="35" rx="7" fill="#102231" stroke="#355166"/>
+  <text x="1100" y="430" fill="#b6a1f8" font-family="Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="2">AI</text>
+  <text x="60" y="600" fill="#8f9fb2" font-family="Segoe UI,Arial,sans-serif" font-size="14">Santiago, Chile</text>
+  <text x="1140" y="600" text-anchor="end" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="14" letter-spacing="2">PORTFOLIO / 2026</text>
+</svg>

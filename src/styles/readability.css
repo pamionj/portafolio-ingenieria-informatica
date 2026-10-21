@@ -1,0 +1,62 @@
+/* Body copy stays readable; terminal drawings retain their small details. */
+.nav-link { font-size: 12px; }
+.command-trigger { font-size: 12px; }
+.hero-description { font-size: 14px; }
+.hero-location { font-size: 10px; }
+.button { font-size: 12px; }
+.about-strip p { font-size: 13px; }
+.education { font-size: 10px; }
+.section-heading > p { font-size: 13px; }
+.project-body > p { font-size: 13px; }
+.project-label { font-size: 9px; }
+.tags li { font-size: 9px; }
+.project-links a, .project-links > .text-link { font-size: 11px; }
+.capability-card > p { font-size: 12px; }
+.capability-card li { font-size: 11px; }
+.stack-card-title p { font-size: 11px; }
+.stack-skills li { font-size: 11px; }
+.impact-card p { font-size: 13px; }
+.impact-source { font-size: 9px; }
+.experience-row > div > span { font-size: 11px; }
+.experience-row > p { font-size: 12px; }
+.contact-copy > p { font-size: 13px; }
+.contact-profiles a { font-size: 12px; }
+.footer-middle { font-size: 10px; }
+.case-context, .case-story p { font-size: 13px; }
+.filter-button { min-height: 40px; font-size: 11px; }
+@media (max-width: 1190px) and (min-width: 761px) {
+  .sidebar .nav-link { font-size: 11px; }
+  .hero-description { font-size: 13px; }
+  .capability-card li { font-size: 10px; }
+}
+@media (max-width: 760px) {
+  .hero-description { font-size: 13px; }
+  .hero-actions .button { font-size: 11px; }
+  .hero-location { font-size: 9px; }
+  .about-strip p { font-size: 12px; }
+  .section-heading > p { font-size: 12px; }
+  .filter-button { font-size: 10px; padding-inline: 9px; }
+  .project-label { font-size: 8px; }
+  .tags li { font-size: 8px; }
+  .capability-card li { font-size: 11px; }
+  .impact-card p { font-size: 12px; }
+  .experience-row > p { font-size: 11px; }
+  .contact-copy > p { font-size: 12px; }
+}
+@media (max-width: 540px) {
+  .hero-description { font-size: 14px; }
+  .hero-actions .button { min-height: 45px; }
+  .about-strip p, .project-body > p { font-size: 13px; }
+  .education { font-size: 10px; }
+  .project-links a, .project-links > .text-link { min-height: 36px; }
+  .capability-card > p, .capability-card li { font-size: 12px; }
+  .impact-card p { font-size: 13px; }
+  .case-context, .case-story p { font-size: 12px; }
+  .contact-profiles a { min-height: 44px; font-size: 11px; }
+  .icon-button { width: 44px; height: 44px; }
+  .section-note { font-size: 10px; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 51px; }
+  .hero-actions .button { padding-inline: 12px; font-size: 10px; }
+}

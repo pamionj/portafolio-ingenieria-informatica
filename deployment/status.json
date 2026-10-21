@@ -1,0 +1,11 @@
+{
+  "provider": "Cloudflare Pages",
+  "project_name": "pabloamion-portfolio",
+  "production_url": "https://pabloamion-portfolio.pages.dev/",
+  "deployment_status": "succeeded",
+  "verified_date": "2026-10-21",
+  "requested_domain": "pabloamion.is-a.dev",
+  "domain_status": "not_submitted",
+  "domain_pr": null,
+  "domain_note": "The register repository requires a human-written and human-submitted request."
+}
