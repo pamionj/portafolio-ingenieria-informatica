@@ -4,7 +4,7 @@ Preparado para Cloudflare Pages (plan gratuito), con HTML estático generado por
 
 ## Proyecto creado
 
-Cloudflare Pages: `pabloamion-portfolio`, modalidad **Direct Upload**. Hostname asignado: `pabloamion-portfolio.pages.dev`. El registro preparado apunta a ese hostname. La existencia del proyecto no implica que el despliegue haya terminado: comprobar el estado en Cloudflare.
+Cloudflare Pages: `pabloamion-portfolio`, modalidad **Direct Upload**. Publicación verificada el 21 de octubre de 2026: **https://pabloamion-portfolio.pages.dev/**. El registro de referencia apunta a ese hostname. El primer control automático de GitHub Actions también terminó correctamente.
 
 ## Actualizaciones en Cloudflare Pages
 
@@ -41,7 +41,25 @@ El sitio presenta capacidades personales sin tarifas, pagos ni contratación com
 
 `owner.username` identifica al solicitante en GitHub. `records.CNAME` apunta al hostname público de Cloudflare Pages, sin protocolo ni ruta. El nombre del archivo dentro del registro sería `domains/pabloamion.json`; no contiene `is-a.dev` en el nombre. El sitio debe responder antes de presentar la solicitud.
 
-La plantilla consultada también pide un medio de contacto en `owner`, además del usuario. Al redactar el registro, el propietario puede incluir su correo público `pamionj@gmail.com`, ya presente en el portafolio. No se ha presentado ninguna solicitud ni aceptado términos de is-a.dev.
+La plantilla consultada también pide un medio de contacto en `owner`, además del usuario. La referencia incluye el correo público `pamionj@gmail.com`, ya presente en el portafolio. No se ha presentado ninguna solicitud ni aceptado términos de is-a.dev.
+
+### Asociación a Cloudflare por API
+
+El panel se comprobó y pidió transferir DNS. **No iniciar esa transferencia:** el dominio padre is-a.dev no pertenece a esta cuenta. La [guía de is-a.dev](https://docs.is-a.dev/guides/cloudflare-pages/) explica que la pertenencia a Public Suffix List requiere usar la API.
+
+Después de presentar personalmente la solicitud y coordinar su aprobación, asociar el subdominio con la [API oficial de Cloudflare](https://developers.cloudflare.com/api/resources/pages/subresources/projects/subresources/domains/methods/create/). La operación es `POST /accounts/{account_id}/pages/projects/pabloamion-portfolio/domains` con cuerpo JSON que contiene `name: pabloamion.is-a.dev`. Requiere un token con permiso Pages Write/Edit para la cuenta correcta.
+
+Ejemplo para una terminal local Bash, con los valores sensibles ya configurados como variables de entorno:
+
+```sh
+curl --request POST \
+  "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/pabloamion-portfolio/domains" \
+  --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+  --header 'Content-Type: application/json' \
+  --data '{"name":"pabloamion.is-a.dev"}'
+```
+
+No usar la Global API Key ni pegar tokens en conversaciones. Un estado `pending` o `initializing` no significa que HTTPS esté listo: esperar `active` y comprobar la URL final. No se creó ningún token ni se ejecutó esta operación durante la publicación inicial.
 
 ## Canonical
 

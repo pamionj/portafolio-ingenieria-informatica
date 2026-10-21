@@ -6,6 +6,7 @@
   "verified_date": "2026-10-21",
   "requested_domain": "pabloamion.is-a.dev",
   "domain_status": "not_submitted",
+  "cloudflare_domain_status": "not_attached_requires_api",
   "domain_pr": null,
   "domain_note": "The register repository requires a human-written and human-submitted request."
 }
