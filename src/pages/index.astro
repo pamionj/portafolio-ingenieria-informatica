@@ -10,7 +10,7 @@ import '../styles/hero-system.css';
 import { profile, navigation, projects, capabilities, stack } from '../data/portfolio';
 const title = 'Pablo Amion | Backend, Fullstack & Data Engineering';
 const description = 'Portafolio de Pablo Amion: desarrollo backend y fullstack, ingeniería de datos, automatización e IA aplicada. Proyectos reales desde Santiago, Chile.';
-const site = Astro.site || new URL('https://pabloamion.is-a.dev');
+const site = Astro.site || new URL('https://pabloamion-portfolio.pages.dev');
 const schema = { '@context': 'https://schema.org', '@type': 'ProfilePage', name: title, url: site.href, mainEntity: { '@type': 'Person', name: profile.name, url: site.href, sameAs: [profile.github, profile.linkedin], knowsAbout: ['Backend development', 'Data Engineering', 'Fullstack development', 'Python', 'Java', 'TypeScript'], alumniOf: { '@type': 'EducationalOrganization', name: 'INACAP' } } };
 ---
 <!doctype html>

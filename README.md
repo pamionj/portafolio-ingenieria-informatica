@@ -2,7 +2,7 @@
 
 Portafolio personal con Astro y TypeScript, diseñado desde cero. Azul medianoche, tipografías locales, navegación lateral en escritorio y menú modal en móvil. Sin React en el cliente ni servicios externos para renderizar el contenido.
 
-Publicado: **https://pabloamion-portfolio.pages.dev/**. Destino previsto: **https://pabloamion.is-a.dev**. Primera publicación verificada mediante Direct Upload; GitHub Actions preparado para futuras versiones. [Guía de publicación](deployment/README.md): la solicitud del dominio debe presentarla el propietario, según la política del registro.
+Publicado: **https://pabloamion-portfolio.pages.dev/**. Alojado en Cloudflare Pages mediante Direct Upload; GitHub Actions preparado para futuras versiones. [Guía de publicación](deployment/README.md).
 
 ![Portafolio publicado](docs/preview-desktop.jpg)
 
@@ -36,13 +36,12 @@ Salida publicable: `dist/`. Las pruebas de integración comprueban referencias, 
 - `src/scripts/main.ts`: filtros, navegación activa, `Ctrl/Cmd + K`, copia de correo y guiños de Pokémon/slime.
 - `public/PabloAmion_CV.pdf`: CV proporcionado por el propietario.
 - `public/_headers`: cabeceras para Cloudflare Pages.
-- `scripts/domain-record.mjs`: genera el registro a partir del hostname real de Pages.
 
 Contenido basado en el CV y README públicos consultados el 21 de octubre de 2026. Se mantiene **último semestre de Ingeniería Informática**; no se atribuye un título ya obtenido. Los 48.000+ registros corresponden al CV de la implementación institucional. La demo pública usa datos sintéticos y su volumen puede diferir.
 
 Se distinguen casos reales, demos y laboratorios. Las visuales de las cards son esquemas e interpretaciones, no capturas de los productos. No se exponen datos institucionales ni porcentajes de mejora sin evidencia. El resultado de ML se contextualiza en su test sintético.
 
-Por decisión del propietario, Servicios describe capacidades sin precios ni venta directa para priorizar is-a.dev. El contacto es por correo y LinkedIn; no hay formulario que simule enviar sin backend.
+La sección Servicios presenta capacidades profesionales sin precios ni venta directa. El contacto es por correo y LinkedIn; no hay formulario que simule enviar sin backend.
 
 ## Accesibilidad y rendimiento
 
