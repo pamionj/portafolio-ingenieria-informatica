@@ -1,0 +1,30 @@
+---
+import Icon from './Icon.astro';
+import { projects } from '../data/portfolio';
+
+const stages = [
+  { id: 'datos', label: 'Datos', icon: 'database', projectId: 'unified-data', action: 'Integrar y entender', description: 'Fuentes dispersas se transforman en datos trazables y un dashboard para explorarlos.', code: 'extract → transform → consolidate → load → analytics', tags: ['Python', 'Pandas', 'SQLite'] },
+  { id: 'backend', label: 'Backend', icon: 'server', projectId: 'ai-agent', action: 'Conectar la lógica', description: 'Una API conecta modelos de IA, contexto y herramientas con las reglas del negocio.', code: 'request → intent → context → tool → response', tags: ['FastAPI', 'LLMs', 'RAG'] },
+  { id: 'web', label: 'Web', icon: 'code', projectId: 'biomagnetismo', action: 'Llevarlo a la interfaz', description: 'Un sitio en producción con diseño responsive, SEO técnico y dominio propio para un negocio real.', code: 'diseño → desarrollo → SEO → Cloudflare', tags: ['JavaScript', 'Bootstrap', 'SEO', 'Cloudflare'] },
+].map(stage => ({ ...stage, project: projects.find(project => project.id === stage.projectId)! }));
+---
+<div class="hero-system" data-hero-system data-step="datos">
+  <div class="system-header"><span><i></i> EXPLORAR MI TRABAJO</span><small>01 — 03</small></div>
+  <div class="system-diagram" aria-hidden="true">
+    <div class="system-grid"></div>
+    <svg class="system-connections" viewBox="0 0 440 150" preserveAspectRatio="none" fill="none"><path d="M73.33 75H366.67" stroke="currentColor" stroke-opacity=".18"/><path class="system-signal" d="M73.33 75H366.67" stroke="currentColor" stroke-dasharray="8 148"/><circle cx="73.33" cy="75" r="34"/><circle cx="220" cy="75" r="34"/><circle cx="366.67" cy="75" r="34"/></svg>
+    <div class="system-stations"><span data-station="datos"><Icon name="database" size={29}/><small>DATA</small></span><span data-station="backend"><Icon name="server" size={29}/><small>API</small></span><span data-station="web"><Icon name="code" size={29}/><small>UI</small></span></div>
+  </div>
+  <div class="system-tabs" role="tablist" aria-label="Explorar proyectos por etapa">
+    {stages.map((stage, index) => <button type="button" role="tab" id={`system-tab-${stage.id}`} aria-controls={`system-panel-${stage.id}`} aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1} data-system-tab={stage.id}><span>0{index + 1}</span>{stage.label}<Icon name={stage.icon} size={15}/></button>)}
+  </div>
+  {stages.map((stage, index) => <div class="system-panel" id={`system-panel-${stage.id}`} role="tabpanel" aria-labelledby={`system-tab-${stage.id}`} data-system-panel={stage.id} hidden={index !== 0}>
+    <span class="system-action">{stage.action}</span>
+    <h2>{stage.project.title}</h2>
+    <p>{stage.description}</p>
+    <div class="system-tech">{stage.tags.map(tag => <span>{tag}</span>)}</div>
+    <div class="system-command"><Icon name="terminal" size={13}/><code>{stage.code}</code></div>
+    <button class="system-case" data-project={stage.projectId}>Explorar este proyecto<Icon name="arrow" size={17}/></button>
+  </div>)}
+  <div class="system-hint"><span>SELECCIONA UNA ETAPA</span><span>PROYECTOS REALES ↗</span></div>
+</div>

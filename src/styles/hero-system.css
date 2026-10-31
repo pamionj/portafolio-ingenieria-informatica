@@ -1,0 +1,40 @@
+.hero-top { justify-content: flex-end; }
+.hero-copy h1 { font-size: clamp(68px, 7.1vw, 108px); line-height: .98; letter-spacing: -.065em; }
+.hero-copy .hero-intro { margin-bottom: 16px; }
+.hero-role { font: 400 clamp(20px, 2.05vw, 29px)/1.35 var(--heading); letter-spacing: -.025em; margin-top: 23px; color: var(--text); }
+.hero-system { align-self: center; width: 100%; min-width: 0; border: 1px solid #2b4053; border-radius: 15px; background: linear-gradient(150deg, #122336, #0c1521 65%); overflow: hidden; box-shadow: 0 24px 65px #0003; }
+.system-header { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; border-bottom: 1px solid var(--line); font: 8px var(--mono); letter-spacing: .08em; color: var(--muted); }
+.system-header > span { display: flex; align-items: center; gap: 9px; }
+.system-header i { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px #66e7dd60; }
+.system-header small { color: var(--subtle); font: 8px var(--mono); }
+.system-diagram { height: 148px; position: relative; isolation: isolate; color: var(--cyan); }
+.system-grid { position: absolute; inset: 0; background-image: linear-gradient(#66e7dd07 1px, transparent 1px), linear-gradient(90deg, #66e7dd07 1px, transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(ellipse, black, transparent 80%); }
+.system-connections { position: absolute; inset: 0; height: 100%; width: 100%; }
+.system-connections circle { stroke: currentColor; stroke-opacity: .15; fill: #0c1826; }
+.system-signal { animation: system-flow 7s linear infinite; }
+.system-stations { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; }
+.system-stations > span { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; color: #617b91; transition: color .25s, filter .25s; }
+.system-stations small { font: 6px var(--mono); letter-spacing: .13em; }
+[data-step="datos"] [data-station="datos"], [data-step="backend"] [data-station="backend"], [data-step="web"] [data-station="web"] { color: var(--cyan); filter: drop-shadow(0 0 9px #66e7dd50); }
+.system-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; padding: 0 20px; }
+.system-tabs button { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); background: #0d1725; border-radius: 6px; padding: 11px 8px; min-height: 43px; font-size: 11px; color: var(--muted); transition: background .2s, border-color .2s; }
+.system-tabs button > span { font: 8px var(--mono); color: var(--subtle); }
+.system-tabs button[aria-selected="true"] { border-color: #66e7dd65; color: var(--cyan); background: #66e7dd0a; }
+.system-tabs button:hover { border-color: #66e7dd65; }
+.system-panel { padding: 25px 24px 0; min-height: 270px; }
+.system-action { font: 8px var(--mono); letter-spacing: .09em; text-transform: uppercase; color: var(--cyan); }
+.system-panel h2 { font-size: clamp(21px, 1.85vw, 27px); line-height: 1.2; letter-spacing: -.03em; margin-top: 11px; max-width: 380px; min-height: 2.4em; }
+.system-panel p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 13px; min-height: 5.4em; }
+.system-tech { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; font: 8px var(--mono); color: #9ab4c8; }
+.system-command { display: flex; align-items: center; gap: 7px; color: var(--subtle); border-block: 1px solid var(--line); margin-top: 20px; padding: 12px 0; }
+.system-command code { font: 7px/1.8 var(--mono); overflow-wrap: anywhere; }
+.system-case { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px; color: var(--cyan); padding: 13px 0; font-size: 11px; text-align: left; }
+.system-case:hover { color: #b0fff7; }
+.system-hint { display: flex; justify-content: space-between; gap: 10px; padding: 12px 23px; border-top: 1px solid var(--line); font: 6px var(--mono); letter-spacing: .06em; color: var(--subtle); background: #080f19; }
+@keyframes system-flow { to { stroke-dashoffset: -312; } }
+@media (max-width: 1190px) { .hero-copy h1 { font-size: 80px; } .hero-grid { gap: 28px; } .hero-role { font-size: 23px; } .system-tabs { padding-inline: 15px; } .system-tabs button { font-size: 10px; gap: 6px; } .system-tabs button svg { display: none; } .system-panel { padding-inline: 20px; min-height: 295px; } .system-panel p { font-size: 11px; } }
+@media (max-width: 760px) { .hero-copy h1 { font-size: 73px; } .hero-role { font-size: 21px; } .hero-grid { gap: 24px; } .system-header { padding-inline: 17px; font-size: 7px; } .system-header small { font-size: 7px; } .system-panel { padding-inline: 18px; } .system-panel h2 { font-size: 21px; } .system-tech { gap: 9px; font-size: 7px; } .system-command code { font-size: 6px; } .system-hint { font-size: 5px; padding-inline: 17px; } }
+@media (min-width: 541px) and (max-width: 680px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } .hero-system { max-width: 500px; justify-self: center; } .system-panel { min-height: 265px; } .system-tabs button svg { display: block; } }
+@media (max-width: 540px) { .hero-copy h1 { font-size: clamp(76px, 20vw, 101px); } .hero-role { font-size: 25px; margin-top: 22px; } .hero-grid { gap: 35px; } .hero-system { align-self: center; max-width: 440px; } .system-tabs button { font-size: 11px; min-height: 46px; } .system-tabs button svg { display: block; width: 14px; height: 14px; } .system-panel { min-height: 280px; padding: 23px 21px 0; } .system-panel h2 { font-size: 25px; } .system-panel p { font-size: 12px; } .system-tech { font-size: 8px; } .system-command code { font-size: 7px; } .system-action { font-size: 8px; } .system-hint { font-size: 6px; } .system-header { font-size: 8px; } .system-diagram { height: 135px; } .system-case { font-size: 12px; } .about-strip { margin-top: 35px; } }
+@media (max-width: 360px) { .hero-copy h1 { font-size: 76px; } .hero-role { font-size: 22px; } .system-tabs { padding-inline: 12px; } .system-tabs button { gap: 5px; font-size: 10px; } .system-tabs button svg { display: none; } .system-panel h2 { font-size: 22px; } .system-hint { font-size: 5px; } }
+@media (prefers-reduced-motion: reduce) { .system-signal { animation: none; stroke-dasharray: none; stroke-opacity: .3; } }

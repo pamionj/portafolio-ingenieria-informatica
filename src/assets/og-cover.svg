@@ -10,10 +10,10 @@
   <path d="M60 60h1080M60 565h1080" stroke="#263749"/>
   <circle cx="65" cy="105" r="4" fill="#66e7dd"/>
   <text x="82" y="110" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="13" letter-spacing="3">BACKEND · FULLSTACK · DATOS</text>
-  <text x="60" y="202" fill="#a0b0c4" font-family="Segoe UI,Arial,sans-serif" font-size="25">Pablo Amion</text>
-  <text x="55" y="295" fill="#ecf0f5" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">Código con</text>
-  <text x="55" y="380" fill="#ecf0f5" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">propósito.</text>
-  <text x="55" y="465" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">Impacto real.</text>
+  <text x="60" y="202" fill="#a0b0c4" font-family="Segoe UI,Arial,sans-serif" font-size="20">INGENIERÍA INFORMÁTICA</text>
+  <text x="55" y="295" fill="#ecf0f5" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">Pablo</text>
+  <text x="55" y="380" fill="#ecf0f5" font-family="Segoe UI,Arial,sans-serif" font-size="75" font-weight="600" letter-spacing="-3">Amion.</text>
+  <text x="55" y="465" fill="#66e7dd" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="400" letter-spacing="0">Backend · Fullstack · Datos</text>
   <g fill="none" stroke="#66e7dd" stroke-opacity=".3">
     <circle cx="940" cy="305" r="160" stroke-dasharray="4 7"/>
     <ellipse cx="940" cy="305" rx="215" ry="85" transform="rotate(-40 940 305)"/>

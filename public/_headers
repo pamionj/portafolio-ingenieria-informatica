@@ -7,3 +7,7 @@
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
+
+/PabloAmion_CV.pdf
+  Cache-Control: no-cache, max-age=0, must-revalidate
+  Content-Disposition: attachment; filename="PabloAmion_CV.pdf"

@@ -1,0 +1,47 @@
+---
+import Icon from './Icon.astro';
+---
+<section class="profile-terminal" aria-labelledby="profile-title">
+  <div class="profile-bar">
+    <span class="profile-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="profile-path">pablo@dev:~ / perfil</span>
+    <span class="profile-file">perfil.txt</span>
+  </div>
+  <div class="profile-content">
+    <div class="profile-heading">
+      <span class="section-index">01 / SOBRE MÍ</span>
+      <div class="profile-command" aria-hidden="true"><span>$</span> cat perfil.txt</div>
+      <h2 id="profile-title">Desarrollo de software, datos y experiencia en TI</h2>
+    </div>
+    <div class="profile-description">
+      <p>Mi experiencia en soporte TI me permite comprender las necesidades de la operación y abordarlas desde el desarrollo de software. Me enfoco en backend, integración de datos y automatización, con atención a la calidad del código, la trazabilidad y el mantenimiento.</p>
+      <div class="profile-education"><Icon name="book" size={16}/><span>Analista Programador · Ingeniería Informática, último semestre en INACAP.</span></div>
+    </div>
+  </div>
+  <div class="profile-footer"><span>BACKEND</span><i aria-hidden="true">/</i><span>DATOS</span><i aria-hidden="true">/</i><span>AUTOMATIZACIÓN</span></div>
+</section>
+
+<style>
+  .profile-terminal { margin-top: 57px; border: 1px solid #25384b; border-radius: 11px; background: linear-gradient(125deg, #101c2a, #0b131f); overflow: hidden; }
+  .profile-bar { display: flex; align-items: center; gap: 14px; padding: 13px 24px; border-bottom: 1px solid var(--line); background: #0c1521; }
+  .profile-lights { display: flex; gap: 5px; }
+  .profile-lights i { width: 5px; height: 5px; border-radius: 50%; background: #687a90; }
+  .profile-lights i:first-child { background: #af7378; }
+  .profile-lights i:nth-child(2) { background: #aa996a; }
+  .profile-lights i:nth-child(3) { background: #70a693; }
+  .profile-path { font: 9px var(--mono); color: #a6b6c9; letter-spacing: .02em; }
+  .profile-file { margin-left: auto; font: 8px var(--mono); color: var(--subtle); }
+  .profile-content { display: grid; grid-template-columns: 1fr 1.3fr; gap: 42px; padding: 30px; align-items: center; }
+  .profile-heading .section-index { font-size: 8px; margin-bottom: 17px; }
+  .profile-command { font: 10px var(--mono); color: var(--subtle); margin-bottom: 13px; }
+  .profile-command > span { color: var(--cyan); margin-right: 6px; }
+  .profile-heading h2 { font-size: 25px; line-height: 1.3; letter-spacing: -.03em; font-weight: 500; max-width: 350px; }
+  .profile-description p { color: var(--muted); font-size: 13px; line-height: 1.95; }
+  .profile-education { display: flex; align-items: flex-start; gap: 9px; color: var(--subtle); font-size: 10px; line-height: 1.8; margin-top: 19px; }
+  .profile-education svg { margin-top: 2px; color: #8facbe; }
+  .profile-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--line); padding: 13px 30px; font: 7px var(--mono); letter-spacing: .1em; color: #8fa9bc; }
+  .profile-footer i { color: #476176; font-style: normal; }
+  @media (max-width: 1000px) { .profile-content { gap: 27px; padding: 26px; } .profile-heading h2 { font-size: 23px; } }
+  @media (max-width: 760px) { .profile-terminal { margin-top: 36px; } .profile-content { grid-template-columns: 1fr; gap: 23px; } .profile-heading h2 { max-width: 450px; font-size: 25px; } .profile-description p { font-size: 13px; } .profile-bar { padding-inline: 22px; } .profile-footer { padding-inline: 26px; } }
+  @media (max-width: 540px) { .profile-content { padding: 25px 22px; } .profile-heading h2 { font-size: 24px; } .profile-bar { padding-inline: 18px; gap: 12px; } .profile-path { font-size: 8px; } .profile-file { display: none; } .profile-description p { font-size: 13px; } .profile-education { font-size: 10px; } .profile-footer { gap: 9px; padding-inline: 22px; font-size: 6px; } }
+</style>

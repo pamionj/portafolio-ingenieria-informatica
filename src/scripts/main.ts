@@ -41,6 +41,35 @@ document.querySelectorAll<HTMLButtonElement>('[data-project]').forEach(button =>
   });
 });
 
+const systemTabs = [...document.querySelectorAll<HTMLButtonElement>('[data-system-tab]')];
+function selectSystemTab(tab: HTMLButtonElement, moveFocus = false) {
+  const stage = tab.dataset.systemTab;
+  systemTabs.forEach(item => {
+    const selected = item === tab;
+    item.setAttribute('aria-selected', String(selected));
+    item.tabIndex = selected ? 0 : -1;
+  });
+  document.querySelectorAll<HTMLElement>('[data-system-panel]').forEach(panel => {
+    panel.hidden = panel.dataset.systemPanel !== stage;
+  });
+  const system = document.querySelector<HTMLElement>('[data-hero-system]');
+  if (system && stage) system.dataset.step = stage;
+  if (moveFocus) tab.focus();
+}
+systemTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectSystemTab(tab));
+  tab.addEventListener('keydown', event => {
+    let next = index;
+    if (event.key === 'ArrowRight') next = (index + 1) % systemTabs.length;
+    else if (event.key === 'ArrowLeft') next = (index - 1 + systemTabs.length) % systemTabs.length;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = systemTabs.length - 1;
+    else return;
+    event.preventDefault();
+    selectSystemTab(systemTabs[next], true);
+  });
+});
+
 // Native buttons remain keyboard accessible; filtering preserves the curated order.
 const filterButtons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
 const cards = document.querySelectorAll<HTMLElement>('.project-card');
@@ -115,6 +144,15 @@ byId<HTMLButtonElement>('easter-trigger')?.addEventListener('click', event => {
   if (!note) return;
   note.hidden = !note.hidden;
   button.setAttribute('aria-expanded', String(!note.hidden));
+});
+document.addEventListener('click', event => {
+  const note = byId('easter-note');
+  const trigger = byId('easter-trigger');
+  const target = event.target;
+  if (!note || note.hidden || !(target instanceof Node)) return;
+  if (note.contains(target) || trigger?.contains(target)) return;
+  note.hidden = true;
+  trigger?.setAttribute('aria-expanded', 'false');
 });
 
 const commandDialog = byId<HTMLDialogElement>('command-dialog');
